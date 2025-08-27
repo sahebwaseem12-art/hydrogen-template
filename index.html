@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>اتصل نصل إليك | أسرع توصيل في اليمن</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { background: linear-gradient(135deg, #f7b42c, #fc575e); font-family: 'Cairo', sans-serif; margin: 0; padding: 0; color: #222;}
+        header { text-align: center; padding: 30px 10px 10px 10px; background: rgba(255,255,255,0.85);}
+        header h1 { margin: 0; font-size: 2.3em; color: #fc575e; font-weight: bold;}
+        header p { margin: 8px 0 0 0; font-size: 1.2em; color: #f7b42c; font-weight: bold;}
+        .slogan { background: #fff8e1; text-align: center; padding: 10px 0 5px 0; font-size: 1.1em; color: #d35400; font-weight: bold;}
+        nav { background: #fff8e1; text-align: center; padding: 8px 0; margin-bottom: 9px;}
+        nav a { color: #fc575e; text-decoration: none; padding: 0 18px; font-size: 1.1em; font-weight: bold; transition: color 0.2s;}
+        nav a:hover { color: #d35400;}
+        .login, .register-restaurant, .wallets { background: #fff; max-width: 400px; margin: 20px auto 0 auto; border-radius: 13px; box-shadow: 0 2px 10px #0001; padding: 24px 20px 20px 20px;}
+        .login h2, .register-restaurant h2, .wallets h2 { text-align: center; color: #fc575e; margin-bottom: 12px;}
+        .login label, .register-restaurant label, .wallets label { font-weight: bold; margin-bottom: 4px; display: block;}
+        .login input, .register-restaurant input, .register-restaurant textarea, .wallets input { width: 100%; padding: 9px; margin-bottom: 12px; border: 1px solid #f7b42c; border-radius: 7px; font-size: 1em;}
+        .login-btn, .register-btn, .wallets-btn { background: #f7b42c; color: #fff; border: none; padding: 10px 16px; border-radius: 20px; font-size: 1em; cursor: pointer; width: 100%; margin-top: 6px;}
+        .login-btn:hover, .register-btn:hover, .wallets-btn:hover { background: #fc575e;}
+        .offers { background: #fff8e1; padding: 20px; text-align: center; border-bottom: 2px solid #f7b42c;}
+        .offers h2 { color: #d35400; margin-bottom: 12px;}
+        .offers .discount { display: inline-block; margin: 5px; padding: 8px 18px; background: #fc575e; color: #fff; border-radius: 24px; font-weight: bold; font-size: 1em;}
+        .restaurants { padding: 25px;}
+        .restaurant-card { background: #fff; border-radius: 12px; box-shadow: 0 2px 10px #0001; margin-bottom: 28px; padding: 20px; position:relative;}
+        .restaurant-card h3 { margin: 0; color: #fc575e; font-size: 1.3em;}
+        .dishes { margin-top: 17px; margin-bottom: 8px;}
+        .dish { display: inline-block; margin: 4px; padding: 6px 14px; background: #f7b42c; color: #fff; border-radius: 16px; font-size: 1em;}
+        .discount-select { margin-top: 8px;}
+        .order-btn { background: #fc575e; color: #fff; border: none; padding: 12px 22px; border-radius: 24px; font-size: 1.1em; margin-top: 10px; cursor: pointer; transition: background 0.2s;}
+        .order-btn:hover { background: #f7b42c;}
+        .payment-method { margin-top: 12px; font-size: 1em;}
+        .map { margin-top: 14px;}
+        .map iframe { border-radius: 10px; width: 100%; height: 180px;}
+        .wallets-list { margin-top: 7px;}
+        .wallet { background: #fc575e; color: #fff; border-radius: 8px; padding: 8px 18px; margin: 4px; display: inline-block;}
+        .tracking, .contact { background: #fff; margin: 24px auto; border-radius: 15px; max-width: 500px; box-shadow: 0 2px 10px #0001; padding: 28px 22px;}
+        .tracking h2, .contact h2 { color: #fc575e; margin-top: 0;}
+        .tracking label, .contact label { display: block; margin-bottom: 6px; font-weight: bold;}
+        .tracking input, .contact input, .contact textarea { width: 100%; padding: 9px; margin-bottom: 12px; border: 1px solid #f7b42c; border-radius: 7px; font-size: 1em;}
+        .tracking-btn, .contact-btn { background: #f7b42c; color: #fff; border: none; padding: 10px 18px; border-radius: 20px; font-size: 1em; cursor: pointer; margin-top: 8px;}
+        .tracking-btn:hover, .contact-btn:hover { background: #fc575e;}
+        .tracking-status { background: #fc575e; color: #fff; padding: 15px; border-radius: 10px; margin-top: 12px; text-align: center; font-weight: bold; font-size: 1.1em;}
+        .top-features { background: #fff8e1; text-align: center; padding: 10px 0 8px 0; font-size: 1em; color: #d35400; font-weight: bold;}
+        .best-app { color: #388e3c; font-size: 1.15em; font-weight: bold;}
+        .notification { background:#f7b42c; color:#fff; padding:10px; border-radius:7px; text-align:center; margin:10px 0;}
+        footer { background: #fff8e1; text-align: center; padding: 14px; font-size: 1em; color: #222; margin-top: 30px; border-top: 2px solid #fc575e;}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>اتصل نصل إليك</h1>
+        <p>شعارنا: اتصل نصل إليك</p>
+    </header>
+    <div class="slogan">
+        أسرع توصيل في اليمن | <span class="best-app">أفضل تطبيق توصيل في اليمن</span>
+    </div>
+    <nav>
+        <a href="#login">تسجيل دخول</a>
+        <a href="#register-restaurant">تسجيل مطعم</a>
+        <a href="#offers">العروض</a>
+        <a href="#restaurants">المطاعم</a>
+        <a href="#wallets">المحافظ الإلكترونية</a>
+        <a href="#tracking">تتبع الطلبات</a>
+        <a href="#contact">اتصل بنا</a>
+    </nav>
+    <!-- إشعارات -->
+    <div id="notifications"></div>
+    <!-- تسجيل دخول -->
+    <div class="login" id="login">
+        <h2>تسجيل دخول</h2>
+        <form id="loginForm" onsubmit="loginUser(event)">
+            <label for="phone">رقم الهاتف:</label>
+            <input type="tel" id="phone" placeholder="7xxxxxxxx" pattern="[0-9]{9,12}">
+            <label for="email">أو البريد الإلكتروني:</label>
+            <input type="email" id="email" placeholder="example@email.com">
+            <button type="submit" class="login-btn">دخول</button>
+        </form>
+        <div id="loginResult"></div>
+    </div>
+    <!-- تسجيل المطاعم -->
+    <div class="register-restaurant" id="register-restaurant">
+        <h2>تسجيل مطعم جديد</h2>
+        <form id="restaurantForm" onsubmit="registerRestaurant(event)">
+            <label for="rname">اسم المطعم:</label>
+            <input type="text" id="rname" required>
+            <label for="rlocation">عنوان المطعم:</label>
+            <input type="text" id="rlocation" required placeholder="مثال: صنعاء - شارع الزبيري">
+            <label for="rmap">رابط خرائط جوجل للمطعم:</label>
+            <input type="url" id="rmap" required placeholder="ضع رابط الخريطة هنا">
+            <label for="rdishes">أنواع الأكلات:</label>
+            <textarea id="rdishes" rows="2" required placeholder="مثال: مشويات، كبسة، مندي..."></textarea>
+            <button type="submit" class="register-btn">تسجيل المطعم</button>
+        </form>
+        <div id="registerResult"></div>
+    </div>
+    <!-- العروض -->
+    <div class="offers" id="offers">
+        <h2>تخفيضات وعروض اليوم</h2>
+        <span class="discount">خصم 10%</span>
+        <span class="discount">خصم 15%</span>
+        <span class="discount">خصم 20%</span>
+        <span class="discount">خصم 30%</span>
+    </div>
+    <!-- الميزات -->
+    <div class="top-features">
+        <span>✓ خدمة عملاء على مدار الساعة | ✓ تتبع الطلب بالخرائط | ✓ تنوع المطاعم والأكلات | ✓ دفع عبر الإنترنت أو عند الاستلام</span>
+    </div>
+    <!-- المطاعم -->
+    <div class="restaurants" id="restaurants">
+        <!-- سيتم إضافة المطاعم المسجلة هنا -->
+        <!-- مثال مطعم افتراضي -->
+        <div class="restaurant-card">
+            <h3>مطعم الشيف</h3>
+            <div class="dishes">
+                <span class="dish">مشويات</span>
+                <span class="dish">كبسة دجاج</span>
+                <span class="dish">مندي لحم</span>
+                <span class="dish">سلطة خضراء</span>
+            </div>
+            <div class="discount-select">
+                <label for="discount1">اختر نسبة الخصم:</label>
+                <select id="discount1">
+                    <option value="0">بدون خصم</option>
+                    <option value="10">10%</option>
+                    <option value="15">15%</option>
+                    <option value="20">20%</option>
+                    <option value="30">30%</option>
+                </select>
+            </div>
+            <div class="payment-method">
+                <label>طريقة الدفع:</label>
+                <input type="radio" name="payment1" value="online" checked> عبر الإنترنت
+                <input type="radio" name="payment1" value="cash"> عند الاستلام
+            </div>
+            <div class="map">
+                <iframe src="https://maps.google.com/maps?q=15.3694,44.1910&hl=ar&z=14&output=embed"></iframe>
+            </div>
+            <button class="order-btn" onclick="order('مطعم الشيف')">طلب من هذا المطعم</button>
+        </div>
+        <!-- أضف مطاعم أكثر بنفس النمط -->
+    </div>
+    <!-- المحافظ الإلكترونية -->
+    <div class="wallets" id="wallets">
+        <h2>المحافظ الإلكترونية اليمنية</h2>
+        <div class="wallets-list">
+            <div class="wallet">بنك الكريمي</div>
+            <div class="wallet">وان كاش</div>
+            <div class="wallet">بنك التضامن</div>
+            <div class="wallet">يمن موبايل</div>
+            <div class="wallet">mtn كاش</div>
+            <div class="wallet">سبأفون كاش</div>
+        </div>
+        <label for="account">رقم حساب صاحب الموقع (للدفع):</label>
+        <input type="text" id="account" placeholder="ضع رقم حسابك هنا (مثال: 777xxxxxxx)">
+        <button class="wallets-btn" onclick="saveAccount()">حفظ رقم الحساب</button>
+        <div id="accountResult"></div>
+    </div>
+    <!-- تتبع الطلبات -->
+    <div class="tracking" id="tracking">
+        <h2>تتبع الطلبات</h2>
+        <label for="orderId">رقم الطلب:</label>
+        <input type="text" id="orderId" placeholder="أدخل رقم الطلب">
+        <button class="tracking-btn" onclick="trackOrder()">تتبع الطلب</button>
+        <div id="trackingResult"></div>
+    </div>
+    <!-- اتصل بنا -->
+    <div class="contact" id="contact">
+        <h2>اتصل بنا</h2>
+        <form id="contactForm" onsubmit="sendContact(event)">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" required>
+            <label for="email-contact">البريد الإلكتروني:</label>
+            <input type="email" id="email-contact" required>
+            <label for="msg">رسالتك:</label>
+            <textarea id="msg" rows="4" required></textarea>
+            <button type="submit" class="contact-btn">إرسال</button>
+        </form>
+        <div id="contactResult"></div>
+    </div>
+    <footer>
+        &copy; 2025 اتصل نصل إليك. جميع الحقوق محفوظة.
+    </footer>
+    <script>
+        // إشعارات بسيطة
+        function showNotification(msg) {
+            document.getElementById('notifications').innerHTML = '<div class="notification">' + msg + '</div>';
+            setTimeout(() => { document.getElementById('notifications').innerHTML = ''; }, 3500);
+        }
+        // تسجيل دخول
+        function loginUser(e) {
+            e.preventDefault();
+            var phone = document.getElementById('phone').value;
+            var email = document.getElementById('email').value;
+            var loginResult = document.getElementById('loginResult');
+            if(phone || email) {
+                loginResult.innerHTML = "<div class='tracking-status'>مرحبًا بك! تم تسجيل الدخول بنجاح.</div>";
+                showNotification("تم تسجيل الدخول بنجاح!");
+                document.getElementById('loginForm').reset();
+            } else {
+                loginResult.innerHTML = "<div class='tracking-status'>يرجى إدخال رقم الهاتف أو البريد الإلكتروني.</div>";
+            }
+        }
+        // تسجيل مطعم جديد
+        function registerRestaurant(e) {
+            e.preventDefault();
+            var name = document.getElementById('rname').value;
+            var location = document.getElementById('rlocation').value;
+            var mapLink = document.getElementById('rmap').value;
+            var dishes = document.getElementById('rdishes').value;
+            var resultDiv = document.getElementById('registerResult');
+            if(name && location && mapLink && dishes) {
+                // أضف المطعم لقائمة المطاعم
+                var restaurantsDiv = document.getElementById('restaurants');
+                var card = document.createElement('div');
+                card.className = "restaurant-card";
+                card.innerHTML = `<h3>${name}</h3>
+                    <div class="dishes">${dishes.split(',').map(d=>`<span class="dish">${d.trim()}</span>`).join('')}</div>
+                    <div class="discount-select">
+                        <label>اختر نسبة الخصم:</label>
+                        <select>
+                            <option value="0">بدون خصم</option>
+                            <option value="10">10%</option>
+                            <option value="15">15%</option>
+                            <option value="20">20%</option>
+                            <option value="30">30%</option>
+                        </select>
+                    </div>
+                    <div class="payment-method">
+                        <label>طريقة الدفع:</label>
+                        <input type="radio" value="online" checked> عبر الإنترنت
+                        <input type="radio" value="cash"> عند الاستلام
+                    </div>
+                    <div class="map"><iframe src="${mapLink}" allowfullscreen></iframe></div>
+                    <button class="order-btn" onclick="order('${name}')">طلب من هذا المطعم</button>
+                `;
+                restaurantsDiv.appendChild(card);
+                resultDiv.innerHTML = "<div class='tracking-status'>تم تسجيل المطعم وإضافته بنجاح!</div>";
+                showNotification("تم تسجيل مطعم جديد!");
+                document.getElementById('restaurantForm').reset();
+            }
+        }
+        // حفظ رقم الحساب
+        function saveAccount() {
+            var acc = document.getElementById('account').value;
+            var resultDiv = document.getElementById('accountResult');
+            if(acc) {
+                resultDiv.innerHTML = "<div class='tracking-status'>تم حفظ رقم الحساب: "+acc+"</div>";
+                showNotification("تم حفظ رقم الحساب!");
+            } else {
+                resultDiv.innerHTML = "<div class='tracking-status'>يرجى إدخال رقم الحساب.</div>";
+            }
+        }
+        // طلب من المطعم
+        function order(restaurant) {
+            let orderId = Math.floor(Math.random()*90000+10000);
+            showNotification('تم إرسال طلبك من ' + restaurant + '! رقم الطلب: ' + orderId);
+        }
+        // تتبع الطلب
+        function trackOrder() {
+            var orderId = document.getElementById('orderId').value;
+            var resultDiv = document.getElementById('trackingResult');
+            if(!orderId) {
+                resultDiv.innerHTML = "<div class='tracking-status'>يرجى إدخال رقم الطلب!</div>";
+                return;
+            }
+            var statuses = [
+                "تم استقبال الطلب",
+                "جارٍ تجهيز الطلب",
+                "العميل في الطريق إليك 🚗",
+                "تم توصيل الطلب"
+            ];
+            var status = statuses[Math.floor(Math.random() * statuses.length)];
+            resultDiv.innerHTML = "<div class='tracking-status'>حالة الطلب #" + orderId + ": " + status + "</div>";
+            if(status === "العميل في الطريق إليك 🚗") {
+                showNotification("تنبيه: العميل في الطريق إليك!");
+            }
+        }
+        // اتصل بنا
+        function sendContact(e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email-contact').value;
+            var msg = document.getElementById('msg').value;
+            var resultDiv = document.getElementById('contactResult');
+            if(name && email && msg) {
+                resultDiv.innerHTML = "<div class='tracking-status'>شكرًا لك " + name + "! تم استلام رسالتك وسنرد عليك قريبًا.</div>";
+                showNotification("تم إرسال رسالتك بنجاح!");
+                document.getElementById('contactForm').reset();
+            }
+        }
+    </script>
+</body>
+</html>
